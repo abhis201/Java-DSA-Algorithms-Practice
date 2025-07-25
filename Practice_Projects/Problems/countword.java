@@ -1,5 +1,4 @@
 package Problems;
-//Course certificate link : https://www.linkedin.com/learning/certificates/7e57cb08054a6df38e66637a2367c143f5470dd478c0cc0ef7395cdec61281d1?trk=share_certificate
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.HashMap;
@@ -16,7 +15,7 @@ public class countword {
             return "";
         }
 
-        HashMap<String, Integer> wordCountMap = new HashMap();
+        HashMap<String, Integer> wordCountMap = new HashMap<String, Integer>();
         for (String word : uncommonWords) {
             if (wordCountMap.containsKey(word)) {
                 wordCountMap.put(word, wordCountMap.get(word) + 1);
@@ -46,7 +45,7 @@ public class countword {
         String[] words = lowercased.split("[ \\n\\t\\r.,;:!?(){]");
         
 
-        List commonWords = List.of("the", "a", "or", "an", "it", "and",
+        List<String> commonWords = List.of("the", "a", "or", "an", "it", "and",
                 "but", "is", "are", "of", "on", "to", "was", "were", "in",
                 "that", "i", "your", "his", "their", "her", "you", "me",
                 "they", "at", "be");
